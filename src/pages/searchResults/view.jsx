@@ -42,5 +42,6 @@ export default function view({ listArts, loading, breadCrumb }) {
 
 view.propTypes = {
     listArts: PropTypes.array,
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
+    breadCrumb: PropTypes.array
 }
