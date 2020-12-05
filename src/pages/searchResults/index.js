@@ -20,7 +20,6 @@ export default function Index() {
         getRequest(url)
         .then((data) => {
             let breads = data.filters.length > 0 ? data.filters[0].values[0].path_from_root : [{ name: queryUrl }];
-            console.info(breads);
             setBreadCrumb(breads);
             setListArts(data.results.splice(0, 4))
             setLoading(false);
