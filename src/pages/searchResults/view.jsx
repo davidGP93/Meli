@@ -13,9 +13,12 @@ export default function view({ listArts, loading, breadCrumb }) {
   return (
     <Layout>
       <div className={indexStyles.generalContainerSearchResult}>
-        <div className={indexStyles.breadCrumbs}>
-          Inicio { breadCrumb.map(item => (`> ${item.name}`)) }
-        </div>
+        {
+          listArts.length > 0 &&
+            <div className={indexStyles.breadCrumbs}>
+              Inicio { breadCrumb.map(item => (`> ${item.name}`)) }
+            </div>
+        }
         <div className={indexStyles.listProducts}>
           {
             listArts.length > 0 ?
