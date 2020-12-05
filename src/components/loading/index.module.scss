@@ -1,0 +1,42 @@
+.generalContainerLoading {
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    animation-name: bounce-3;
+    animation-timing-function: ease;
+}
+
+.generalContainerLoading .box {
+    align-self: center;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    height: 200px;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+}
+
+.generalContainerLoading .bounce3 {
+    animation-name: bounce-3;
+    animation-timing-function: ease;
+}
+
+.generalContainerLoading img {
+    width: 300px;
+    height: auto;
+}
+
+.generalContainerLoading h6 {
+    text-align: center;
+}
+
+@keyframes bounce-3 {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-100px); }
+    50%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}

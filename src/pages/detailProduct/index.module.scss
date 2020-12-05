@@ -1,0 +1,75 @@
+@import '../../styles/variables.module.scss';
+
+.generalContainerDetailProduct {
+    background-color: $white;
+    width: $max-width-platform;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.breadCrumbs {
+    margin: 16px auto;
+    color: $gray-2;
+    max-width: $max-width-platform;
+}
+
+.generalContainerDetailProduct .dataArt {
+    display: flex;
+}
+
+.generalContainerDetailProduct .dataArt img {
+    width: 60%;
+    border-radius: 7px;
+}
+
+.generalContainerDetailProduct .dataArt .infoArt {
+    margin-left: 16px;
+    padding-top: 32px;
+}
+
+.generalContainerDetailProduct .dataArt .infoArt .soldQuantity {
+    font-size: 14px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.generalContainerDetailProduct .dataArt .infoArt .title {
+    font-size: 24px;
+    font-weight: 500;
+    display: block;
+    padding-bottom: 32px;
+}
+
+.generalContainerDetailProduct .dataArt .infoArt .price {
+    font-size: 46px;
+    display: block;
+    padding-bottom: 32px;
+}
+
+.generalContainerDetailProduct .dataArt .infoArt .btnBuy {
+    background-color: $blue-color;
+    border: none;
+    color: $white;
+    padding: 10px 70px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.generalContainerDetailProduct .description {
+    padding-left: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    width: 70%;
+}
+
+.generalContainerDetailProduct .description .titleDescription {
+    font-size: 28px;
+    font-weight: 400;
+    padding-bottom: 32px;
+    display: block;
+}
+
+.generalContainerDetailProduct .description .textDescription {
+    font-size: 16px;
+}

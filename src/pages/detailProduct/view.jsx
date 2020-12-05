@@ -1,0 +1,49 @@
+import React from 'react';
+import PropTypes from "prop-types";
+import {Helmet} from "react-helmet";
+
+import Layout from "../../components/layout";
+import Loading from "../../components/loading";
+
+import indexStyles from "./index.module.scss";
+
+export default function view({ dataProduct, loading, error }) {
+    if(loading) return <Loading />
+    return (
+        <Layout>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{dataProduct.title}</title>
+                <meta name="description" content={dataProduct.description} />
+                <meta name="keywords" content={dataProduct.title} />
+                <meta name="og:image" content={dataProduct.pictures[0].secure_url} />
+                <meta name="og:title" content={dataProduct.title} />
+                <meta name="og:description" content={dataProduct.description} />
+            </Helmet>
+            <div className={indexStyles.breadCrumbs}>
+            Inicio {'>'} {dataProduct.category_id} {'>'}  {dataProduct.title}
+            </div>
+            <div className={indexStyles.generalContainerDetailProduct}>
+                <div className={indexStyles.dataArt}>
+                    <img src={dataProduct.pictures[0].secure_url} alt={dataProduct.title} />
+                    <div className={indexStyles.infoArt}>
+                        <span className={indexStyles.soldQuantity}>{dataProduct.condition === 'new' ? 'Nuevo' : 'Antiguo'} - {dataProduct.sold_quantity} vendidos</span>
+                        <span className={indexStyles.title}>{dataProduct.title}</span>
+                        <span className={indexStyles.price}>${' '}{dataProduct.price}</span>
+                        <button className={indexStyles.btnBuy}>Comprar</button>
+                    </div>
+                </div>
+                <div className={indexStyles.description}>
+                    <span className={indexStyles.titleDescription}>Descripción del producto</span>
+                    <span className={indexStyles.textDescription}>{dataProduct.description}</span>
+                </div>
+            </div>
+        </Layout>
+    )
+}
+
+view.propTypes = {
+    dataProduct: PropTypes.shape(),
+    loading: PropTypes.bool,
+    error: PropTypes.string
+}

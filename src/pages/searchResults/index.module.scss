@@ -1,0 +1,61 @@
+@import "../../styles/variables.module.scss";
+
+.notFound {
+    background-color: $gray-1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    font-weight: 700;
+}
+
+.generalContainerSearchResult {
+    max-width: $max-width-platform;
+    margin: 0 auto;
+}
+
+.generalContainerSearchResult .breadCrumbs {
+    margin: 16px 0;
+    color: $gray-2;
+}
+
+.generalContainerSearchResult .listProducts {
+    background-color: $white;
+    border-radius: 7px;
+} 
+
+.generalContainerSearchResult .listProducts a {
+    text-decoration: none;
+    color: black;
+}
+
+.generalContainerSearchResult .listProducts .fieldProduct {
+    display: flex;
+    border-bottom: 1px solid $gray-1;
+    padding: 16px;
+}
+
+.generalContainerSearchResult .listProducts .fieldProduct img {
+    width: 180px;
+    height: 180px;
+    border-radius: 4px;
+}
+
+.generalContainerSearchResult .listProducts .fieldProduct .dataProduct {
+    margin-left: 16px;
+    width: 60%;
+}
+
+.generalContainerSearchResult .listProducts .fieldProduct .dataProduct .value {
+    margin-bottom: 32px;
+    font-size: 24px;
+}
+
+.generalContainerSearchResult .listProducts .fieldProduct .dataProduct .title {
+    font-size: 18px;
+}
+
+.generalContainerSearchResult .listProducts .fieldProduct .stateName {
+    font-size: 12px;
+    color: $gray-2;
+}

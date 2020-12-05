@@ -1,0 +1,42 @@
+@import '../../styles/variables.module.scss';
+
+.generalContainerHeader {
+    background-color: $primary-color;
+}
+
+.generalContainerHeader .containerHeader {
+    max-width: $max-width-platform;
+    display: flex;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.generalContainerHeader .containerHeader #logo {
+    height: 30px;
+    margin-top: 13px;
+}
+
+.generalContainerHeader .containerHeader .searchBar {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 10px;
+    width: 100%;
+}
+
+.generalContainerHeader .containerHeader .searchBar input {
+    height: 30px;
+    width: 100%;
+    border: none;
+    padding-left: 10px;
+}
+
+.generalContainerHeader .containerHeader .searchBar .iconSearch {
+    background-color: $gray-1;
+    padding: 5px 10px;
+    border: none;
+}
+
+.generalContainerHeader .containerHeader .searchBar .iconSearch img {
+    height: 18px;
+}
