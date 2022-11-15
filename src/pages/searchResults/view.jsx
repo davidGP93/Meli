@@ -12,6 +12,7 @@ export default function view({ listArts, loading, breadCrumb }) {
 
   return (
     <Layout>
+      <h1 className={indexStyles.results}>Resultados</h1>
       <div className={indexStyles.generalContainerSearchResult}>
         {
           listArts.length > 0 &&
