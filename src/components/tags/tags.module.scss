@@ -1,0 +1,12 @@
+@import '../../styles/variables.module.scss';
+
+.tagsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+.tagEvery{
+    border-radius: 50%;
+    background-color: $blue-color;
+    color: $white;
+}
