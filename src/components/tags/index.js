@@ -8,7 +8,6 @@ export default function Tags(props) {
       {props?.listTags?.map((tag) => (
         <article className={tagsStyles.tagEvery}>{tag}</article>
       ))}
-      {/* <article className={tagsStyles.tagEvery} >{props}</article> */}
     </section>
   );
 }
