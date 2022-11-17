@@ -31,6 +31,7 @@
 
 .generalContainerSearchResult .listProducts .fieldProduct {
     display: flex;
+    flex-wrap: wrap;
     border-bottom: 1px solid $gray-1;
     padding: 16px;
 }

@@ -29,8 +29,8 @@ export default function view({ listArts, loading, breadCrumb }) {
                   <div className={indexStyles.dataProduct}>
                     <span className={indexStyles.value}>$ {product.price}</span>
                     <p className={indexStyles}>{product.title}</p>
+                    <Tags listTags={product.tags} />
                   </div>
-                  <Tags listTags={product.tags} />
                   <div>
                     <span className={indexStyles.stateName}>
                       {product.address.state_name}

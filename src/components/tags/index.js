@@ -6,7 +6,7 @@ export default function Tags(props) {
   return (
     <section className={tagsStyles.tagsContainer}>
       {props?.listTags?.map((tag) => (
-        <article>{tag}</article>
+        <article className={tagsStyles.tagEvery}>{tag}</article>
       ))}
       {/* <article className={tagsStyles.tagEvery} >{props}</article> */}
     </section>
