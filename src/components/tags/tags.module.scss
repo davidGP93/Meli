@@ -1,0 +1,19 @@
+@import '../../styles/variables.module.scss';
+
+.tagsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+.tagEvery{
+    width: fit-content; 
+    padding: 0 5px;
+    border-radius: 5%;
+    border: 2px $gray-2 solid;
+    background-color: $blue-color;
+    color: $white;
+    height: fit-content;
+    &:hover{
+        background-color: $gray-2;
+    }
+}
