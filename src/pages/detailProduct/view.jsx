@@ -6,6 +6,7 @@ import Layout from "../../components/layout";
 import Loading from "../../components/loading";
 
 import indexStyles from "./index.module.scss";
+import Pictures from '../../components/pictures';
 
 export default function view({ dataProduct, loading, error }) {
     if(loading) return <Loading />
@@ -25,7 +26,13 @@ export default function view({ dataProduct, loading, error }) {
             </div>
             <div className={indexStyles.generalContainerDetailProduct}>
                 <div className={indexStyles.dataArt}>
-                    <img src={dataProduct.pictures[0].secure_url} alt={dataProduct.title} />
+                    <div>
+                        <img src={dataProduct.pictures[0].secure_url} alt={dataProduct.title} />
+                    </div>
+                    <div>
+                        <Pictures listPictures ={dataProduct.pictures}/>
+                    </div>
+                    
                     <div className={indexStyles.infoArt}>
                         <span className={indexStyles.soldQuantity}>{dataProduct.condition === 'new' ? 'Nuevo' : 'Antiguo'} - {dataProduct.sold_quantity} vendidos</span>
                         <span className={indexStyles.title}>{dataProduct.title}</span>
@@ -39,7 +46,7 @@ export default function view({ dataProduct, loading, error }) {
                 </div>
             </div>
         </Layout>
-    )
+    ) 
 }
 
 view.propTypes = {
