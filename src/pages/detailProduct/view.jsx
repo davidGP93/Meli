@@ -27,13 +27,11 @@ export default function view({ dataProduct, loading, error }) {
             <div className={indexStyles.generalContainerDetailProduct}>
                 <div className={indexStyles.dataArt}>
                     <div>
-                        <img src={dataProduct.pictures[0].secure_url} alt={dataProduct.title} />
-                    </div>
-                    <div>
+                        <img src={dataProduct.pictures[2].secure_url} alt={dataProduct.title} />
                         <Pictures listPictures ={dataProduct.pictures}/>
                     </div>
                     
-                    <div className={indexStyles.infoArt}>
+                        <div className={indexStyles.infoArt}>
                         <span className={indexStyles.soldQuantity}>{dataProduct.condition === 'new' ? 'Nuevo' : 'Antiguo'} - {dataProduct.sold_quantity} vendidos</span>
                         <span className={indexStyles.title}>{dataProduct.title}</span>
                         <span className={indexStyles.price}>${' '}{dataProduct.price}</span>

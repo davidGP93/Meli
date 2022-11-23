@@ -5,8 +5,8 @@ import propTypes from "prop-types";
 export default function Pictures (props) {
     return(
         <div className={picturesStyles.pictureContainer}>
-            {props.listPictures.map((picture) => (
-                <img src={picture.url}></img>
+            {props.listPictures.map((picture, index) => (
+                <img onClick={() => alert(index)} src={picture.url}></img>
             ))}
         </div>
     );
