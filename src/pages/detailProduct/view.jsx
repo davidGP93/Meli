@@ -7,6 +7,7 @@ import Loading from "../../components/loading";
 
 import indexStyles from "./index.module.scss";
 import Pictures from '../../components/pictures';
+import mercadoPago from "../../Assets/mercado_pago (1).png";
 
 export default function view({ dataProduct, loading, error, currentImage, handleCurrentImage }) {
     if(loading) return <Loading />
@@ -36,6 +37,10 @@ export default function view({ dataProduct, loading, error, currentImage, handle
                         <span className={indexStyles.title}>{dataProduct.title}</span>
                         <span className={indexStyles.price}>${' '}{dataProduct.price}</span>
                         <button className={indexStyles.btnBuy}>Comprar</button>
+                        <figure className={indexStyles.imgMercadoPago}>
+                        {dataProduct.accepts_mercadopago === true? <img src={mercadoPago}></img> : null}  
+                        </figure>
+                        
                     </div>
                 </div>
                 <div className={indexStyles.description}>
