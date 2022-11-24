@@ -9,6 +9,7 @@ export default function Index() {
     const [ dataProduct, setDataProduct ] = useState(null);
     const [ loading, setLoading ] = useState(true);
     const [ error, setError ] = useState();
+    const [currentImage, setCurrentImage] = useState(0);
     const { id } = useParams();
     
     useEffect(() => {
@@ -33,13 +34,16 @@ export default function Index() {
         }
         getData();
     }, []);
-    
+
+    const handleCurrentImage = (index) => setCurrentImage(index);
 
     return (
         <View 
             dataProduct={dataProduct}
             loading={loading}
             error={error}
+            currentImage={currentImage}
+            handleCurrentImage={handleCurrentImage}
         />
     )
 }
