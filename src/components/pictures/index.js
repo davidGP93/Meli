@@ -2,13 +2,15 @@ import React from "react";
 import picturesStyles from './pictures.module.scss';
 import PropTypes from "prop-types";
 
-export default function Pictures (props) {
+export default function Pictures ({listPictures, handleCurrentImage}) {
     return(
-        <div className={picturesStyles.pictureContainer}>
-            {props.listPictures.map((picture, index) => (
-                <img onClick={() => props.handleCurrentImage(index)} src={picture.url}></img>
+        <section className={picturesStyles.pictureContainer}>
+            {listPictures.map((picture, index) => (
+                <figure className={picturesStyles['pictureContainer-img']}>
+                    <img onClick={() => handleCurrentImage(index)} src={picture.url} ></img>
+                </figure>
             ))}
-        </div>
+        </section>
     );
 }
 

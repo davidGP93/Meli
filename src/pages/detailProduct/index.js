@@ -35,10 +35,7 @@ export default function Index() {
         getData();
     }, []);
 
-    const handleCurrentImage = (index) => {
-        setCurrentImage(index)
-    }
-    
+    const handleCurrentImage = (index) => setCurrentImage(index);
 
     return (
         <View 
