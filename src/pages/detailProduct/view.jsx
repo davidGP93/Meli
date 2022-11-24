@@ -8,7 +8,7 @@ import Loading from "../../components/loading";
 import indexStyles from "./index.module.scss";
 import Pictures from '../../components/pictures';
 
-export default function view({ dataProduct, loading, error }) {
+export default function view({ dataProduct, loading, error, currentImage, handleCurrentImage }) {
     if(loading) return <Loading />
     return (
         <Layout>
@@ -27,8 +27,8 @@ export default function view({ dataProduct, loading, error }) {
             <div className={indexStyles.generalContainerDetailProduct}>
                 <div className={indexStyles.dataArt}>
                     <div>
-                        <img src={dataProduct.pictures[2].secure_url} alt={dataProduct.title} />
-                        <Pictures listPictures ={dataProduct.pictures}/>
+                        <img src={dataProduct.pictures[currentImage].secure_url} alt={dataProduct.title} />
+                        <Pictures listPictures ={dataProduct.pictures} handleCurrentImage={handleCurrentImage}/>
                     </div>
                     
                         <div className={indexStyles.infoArt}>
@@ -50,5 +50,7 @@ export default function view({ dataProduct, loading, error }) {
 view.propTypes = {
     dataProduct: PropTypes.shape(),
     loading: PropTypes.bool,
-    error: PropTypes.string
+    error: PropTypes.string,
+    currentImage: PropTypes.number,
+    handleCurrentImage: PropTypes.func
 }
