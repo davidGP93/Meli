@@ -37,9 +37,10 @@ export default function view({ dataProduct, loading, error, currentImage, handle
                         <span className={indexStyles.title}>{dataProduct.title}</span>
                         <span className={indexStyles.price}>${' '}{dataProduct.price}</span>
                         <button className={indexStyles.btnBuy}>Comprar</button>
+                        {dataProduct.accepts_mercadopago === true? 
                         <figure className={indexStyles.imgMercadoPago}>
-                        {dataProduct.accepts_mercadopago === true? <img src={mercadoPago}></img> : null}  
-                        </figure>
+                            <img src={mercadoPago} alt="mercado_pago"></img>
+                        </figure>: null}
                         
                     </div>
                 </div>
